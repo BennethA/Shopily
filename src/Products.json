@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "type": "men",
+    "image": "images/IMG_7845.jpg",
+    "description": "DOMREBEL",
+    "price": "$400.00"
+  },
+  {
+    "id": 2,
+    "type": "women",
+    "image": "images/IMG_7851.jpg",
+    "description": "Gilda & Pearl",
+    "price": "$4,840.00"
+  },
+  {
+    "id": 3,
+    "type": "children",
+    "image": "images/IMG_7856.jpg",
+    "description": "La Perla Kids",
+    "price": "$400.00"
+  },
+  {
+    "id": 4,
+    "type": "men",
+    "image": "images/IMG_7847.jpg",
+    "description": "Gucci",
+    "price": "$1,240.00"
+  },
+  {
+    "id": 5,
+    "type": "women",
+    "image": "images/IMG_7853.jpg",
+    "description": "Dolce & Gabbana",
+    "price": "$20,040.00"
+  },
+  {
+    "id": 6,
+    "type": "children",
+    "image": "images/IMG_7858.jpg",
+    "description": "Boss Kid",
+    "price": "$400.00"
+  },
+  {
+    "id": 7,
+    "type": "men",
+    "image": "images/IMG_7849.jpg",
+    "description": "Brunello Cucielli",
+    "price": "$5,540.00"
+  },
+  {
+    "id": 8,
+    "type": "women",
+    "image": "images/IMG_7854.jpg",
+    "description": "Lygia",
+    "price": "$140.00"
+  }
+]
