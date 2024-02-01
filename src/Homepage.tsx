@@ -4,13 +4,7 @@ import BottomNav from './BottomNav'
 import Products from './Products'
 import Topbar from './Topbar'
 
-function Homepage() {
-  const [cart, setCart] = useState([])
-
-  const addToCart = (product) => {
-    setCart([...cart, product])
-    console.log(product)
-  }
+function Homepage({addToCart}) { 
 
   return (
     <>

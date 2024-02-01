@@ -6,39 +6,54 @@
 }
 
 .cart {
-  background-color: yellow;
-  margin-bottom: 10px;
+  background-color: gray;
+  margin: 10px 0;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  border-radius: 5px;
+  color: rgb(0, 255, 0);
 }
 
 .cartProducts {
   margin-bottom: 10px;
-  background-color: red;
+  border-radius: 0 25px;
+  background-color: rgb(0, 255, 0);
 }
 
 .cartProduct {
-  border: 2px solid green;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px;
 }
 
 .cartProduct .image {
   height: 90px;
   width: 120px;
-  border: 2px solid;
+  border: 2px solid gray;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartProduct .image img{
+  height: 100%;
 }
 
 .cartProductDesc {
-  background-color: hotpink;
+  border-right: 2px solid;
   padding: 0 5px;
 }
 
-.cartProductPrice {}
+.cartProductPrice {
+}
 
 .totalAmount {
   display: flex;
   justify-content: space-between;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(54, 54, 54, 0.904);
 }
