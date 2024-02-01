@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import './App.css'
 import BottomNav from './BottomNav'
 import Products from './Products'
 import Topbar from './Topbar'
 
 function Homepage() {
+  const [cart, setCart] = useState([])
+
+  function addToCart (product) {
+    setCart([...cart, product])
+  }
 
   return (
     <>
@@ -37,7 +43,7 @@ function Homepage() {
               <p>Money Back Guarantee</p> <span>30 Days Money Back Guarantee</span>
             </div>
           </div>
-          <Products/>
+          <Products products={products} addToCart={addToCart}/>
         </div>
         <BottomNav/>
       </div>

@@ -1,7 +1,11 @@
 import Topbar from "./Topbar"
 import './ShoppingCart.css'
+import { useState } from "react"
+import { createBrowserRouter } from "react-router-dom"
 
-function ShoppingCart({cart}) {
+function ShoppingCart() {
+  const [cart, setCart] = useState([])
+
   const totalPrice = cart.reduce((total, product) => total + product.price, 0)
   return (
     <>
@@ -13,20 +17,25 @@ function ShoppingCart({cart}) {
         {cart.map((product) => (
           <>
             <div className="cartProducts">
-              <div className="cartProduct">
-                <div className="image">
-                  {product.image}
-                </div>
-                <div className="cartProductDesc">
-                  {product.description}
-                </div>
-                <div className="cartProductPrice">
-                  {product.price}
-                </div>
+              {cart.map((product) => (
+                <>
+                  <div className="cartProduct">
+                    <div className="image">
+                      {cart.image}
+                    </div>
+                    <div className="cartProductDesc">
+                      {cart.description}
+                    </div>
+                    <div className="cartProductPrice">
+                      {cart.price}
+                    </div>
+                  </div>
+                </>
+
+              ))}
+              <div className="totalAmount">
+                Total: <b>$0.00</b>
               </div>
-            </div>
-            <div className="totalAmount">
-              Total: <b>$0.00</b>
             </div>
           </>
         ))}
