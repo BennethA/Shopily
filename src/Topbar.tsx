@@ -36,7 +36,7 @@ function Topbar () {
         </div>
         <div className="cartDisplay">
           <Link to='/shoppingCart'>
-            Shopping cart:<br/> <b>$0.00</b>
+            Shopping cart
           </Link>
         </div>
       </div>

@@ -7,8 +7,9 @@ import Topbar from './Topbar'
 function Homepage() {
   const [cart, setCart] = useState([])
 
-  function addToCart (product) {
+  const addToCart = (product) => {
     setCart([...cart, product])
+    console.log(product)
   }
 
   return (
@@ -43,7 +44,7 @@ function Homepage() {
               <p>Money Back Guarantee</p> <span>30 Days Money Back Guarantee</span>
             </div>
           </div>
-          <Products products={products} addToCart={addToCart}/>
+          <Products addToCart={addToCart} />
         </div>
         <BottomNav/>
       </div>

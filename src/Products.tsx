@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './Products.css'
 import PRODUCTS from './Products.json'
+import { Link } from 'react-router-dom'
 
-function Products ({products, addToCart}) {
+function Products ({addToCart}) {
+
   const [selectedCategory, setSelectedCategory] = useState('All')
 
   const filteredProducts = selectedCategory === 'All' ? PRODUCTS:PRODUCTS.filter(product => product.type === selectedCategory)
@@ -38,7 +40,9 @@ function Products ({products, addToCart}) {
                     {product.price}
                   </p>
                   <div className="addToCart" onClick={() => addToCart(product)}>
-                    Add To Cart
+                    <Link to='/shoppingCart'>
+                      Add To Cart
+                    </Link>
                   </div>
                 </div> 
             )

@@ -274,11 +274,15 @@ hr {
 .addToCart {
   text-align: center;
   background-color: rgb(0, 255, 0);
-  color: black;
   border-radius: 15px;
   padding: 5px 0;
   font-weight: bold;
   cursor: pointer;
+}
+
+.addToCart a {
+  color: black;
+  text-decoration: none;
 }
 
 .another {
