@@ -62,7 +62,7 @@ button {
 }
 
 .name a {
-  color: black;
+  color: rgb(0, 255, 0);
   text-decoration: none;
   cursor: pointer;
 }
@@ -95,15 +95,6 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
-
-.second {
-  display: flex;
-  font-weight: bold;
-}
-
-.homepage {
-  margin-right: 10px;
 }
 
 .home {
@@ -211,8 +202,9 @@ button {
   font-weight: bold;
 }
 
-.productsNav button:hover{
-  opacity: 0.85;
+.pNText:focus {
+  color: rgb(0, 255, 0);
+  background-color: white;
 }
 
 .productsSection {
@@ -281,10 +273,11 @@ hr {
 
 .addToCart {
   text-align: center;
-  background-color: black;
-  color: wheat;
-  border-radius: 10px;
+  background-color: rgb(0, 255, 0);
+  color: black;
+  border-radius: 15px;
   padding: 5px 0;
+  font-weight: bold;
   cursor: pointer;
 }
 

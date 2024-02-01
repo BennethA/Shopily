@@ -40,10 +40,6 @@ function Topbar () {
           </Link>
         </div>
       </div>
-      <div className="second">
-        <div className="homepage">Home</div>
-        <div className="shop">Shop</div>
-      </div>
     </div>
 
     </>

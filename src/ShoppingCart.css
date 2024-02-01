@@ -1,0 +1,44 @@
+.shoppingCart {
+  top: 30px;
+  padding: 0% 12%;
+  position: relative;
+  border: 2px solid;
+}
+
+.cart {
+  background-color: yellow;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.cartProducts {
+  margin-bottom: 10px;
+  background-color: red;
+}
+
+.cartProduct {
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartProduct .image {
+  height: 90px;
+  width: 120px;
+  border: 2px solid;
+}
+
+.cartProductDesc {
+  background-color: hotpink;
+  padding: 0 5px;
+}
+
+.cartProductPrice {}
+
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+}

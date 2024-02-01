@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './Products.css'
 import PRODUCTS from './Products.json'
 
@@ -13,10 +14,10 @@ function Products () {
       </div>
       <div className="productsNav">
         <button className="pNText">All</button>
-        <button className="pNText">Electronics</button>
-        <button className="pNText">Jewlry</button>
         <button className="pNText">Men's Clothing</button>
         <button className="pNText">Women's Clothing</button>
+        <button className="pNText">Jewlry</button>
+        <button className="pNText">Children's Clothing</button>
       </div>
       <div className="productsSection">
         {
@@ -33,7 +34,7 @@ function Products () {
                   <p>
                     {product.price}
                   </p>
-                  <div className="addToCart">
+                  <div className="addToCart" >
                     Add To Cart
                   </div>
                 </div> 
