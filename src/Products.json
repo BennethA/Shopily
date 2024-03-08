@@ -1,60 +1,84 @@
 [
   {
-    "id": 1,
-    "type": "men",
-    "image": "images/IMG_7845.jpg",
-    "description": "DOMREBEL",
-    "price": "$400.00"
-  },
-  {
-    "id": 2,
-    "type": "women",
-    "image": "images/IMG_7851.jpg",
-    "description": "Gilda & Pearl",
-    "price": "$4,840.00"
-  },
-  {
-    "id": 3,
-    "type": "children",
-    "image": "images/IMG_7856.jpg",
-    "description": "La Perla Kids",
-    "price": "$400.00"
-  },
-  {
-    "id": 4,
-    "type": "men",
-    "image": "images/IMG_7847.jpg",
-    "description": "Gucci",
-    "price": "$1,240.00"
-  },
-  {
-    "id": 5,
-    "type": "women",
-    "image": "images/IMG_7853.jpg",
-    "description": "Dolce & Gabbana",
-    "price": "$20,040.00"
-  },
-  {
-    "id": 6,
-    "type": "children",
-    "image": "images/IMG_7858.jpg",
-    "description": "Boss Kid",
-    "price": "$400.00"
-  },
-  {
-    "id": 7,
-    "type": "men",
-    "image": "images/IMG_7849.jpg",
-    "description": "Brunello Cucielli",
-    "price": "$5,540.00"
-  },
-  {
-    "id": 8,
-    "type": "women",
-    "image": "images/IMG_7854.jpg",
-    "description": "Lygia",
-    "price": "$140.00"
-  },
+      "id": 1,
+      "category": "Shirts",
+      "name": "Men's Casual Shirt",
+      "price": 39.99,
+      "discount": 10,
+      "description": "A comfortable and stylish men's shirt for casual occasions. This shirt is made of high-quality fabric that ensures breathability and durability. It's perfect for a day out or a relaxed evening with friends. The 10% discount makes it even more appealing.",
+      "rating": 4.5,
+      "image_url": "https://m.media-amazon.com/images/I/316yShnoBmL._AC_SY580_.jpg"
+    },
+    {
+      "id": 2,
+      "category": "Dresses",
+      "name": "Women's Floral Dress",
+      "price": 49.99,
+      "discount": 15,
+      "description": "A beautiful floral dress for women, perfect for summer events. This dress features a stunning floral pattern that exudes elegance and charm. With a 15% discount, it's a must-have for your summer wardrobe.",
+      "rating": 4.8,
+      "image_url": "https://cdn.doduae.com/image/cache/catalog/products/133455/133455_2694977526553_0-600x600.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Jeans",
+      "name": "Men's Slim Fit Jeans",
+      "price": 59.99,
+      "discount": 0,
+      "description": "High-quality slim fit jeans for men, designed for comfort and style. These jeans are tailored to provide a slimming effect while ensuring a comfortable fit throughout the day. Elevate your casual look with these versatile jeans.",
+      "rating": 4.3,
+      "image_url": "https://images.hugoboss.com/is/image/boss/hbeu50470521_420_350?$re_fullPageZoom$&qlt=85&fit=crop,1&align=1,1&lastModified=1683537424000&wid=1200&hei=1818"
+    },
+    {
+      "id": 4,
+      "category": "Footwear",
+      "name": "Women's Running Shoes",
+      "price": 79.99,
+      "discount": 20,
+      "description": "Lightweight and breathable running shoes for women. These running shoes are designed for optimal performance and comfort. With a 20% discount, they offer unbeatable value for fitness enthusiasts and runners.",
+      "rating": 4.6,
+      "image_url": "https://www.underarmour.ae/dw/image/v2/BHCQ_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwd6610f06/ua/U/3/0/U_3026264_301_2568.jpg?sw=700&sh=700&sm=fit"
+    },
+    {
+      "id": 5,
+      "category": "Suits",
+      "name": "Men's Formal Suit",
+      "price": 149.99,
+      "discount": 0,
+      "description": "A classic formal suit for men, suitable for weddings and formal events. This impeccably tailored suit exudes sophistication and timeless style. It's a wardrobe staple for any gentleman looking to make a statement.",
+      "rating": 4.7,
+      "image_url": "https://img.fruugo.com/product/3/42/228633423_max.jpg"
+    },
+    {
+      "id": 6,
+      "category": "Outerwear",
+      "name": "Women's Trench Coat",
+      "price": 89.99,
+      "discount": 10,
+      "description": "A stylish trench coat for women, perfect for rainy days. This trench coat combines fashion and functionality, keeping you dry and stylish on gloomy days. The 10% discount makes it an irresistible choice.",
+      "rating": 4.4,
+      "image_url": "https://image.harrods.com/burberry-cotton-gabardine-oversized-trench-coat_20870243_46748615_2048.jpg"
+    },
+    {
+      "id": 7,
+      "category": "Sweatshirts",
+      "name": "Men's Hooded Sweatshirt",
+      "price": 44.99,
+      "discount": 5,
+      "description": "A comfortable and warm hooded sweatshirt for men. This hoodie is designed to keep you cozy and stylish during chilly weather. The 5% discount adds extra value to this wardrobe essential.",
+      "rating": 4.2,
+      "image_url": "https://m.media-amazon.com/images/I/41JG3kbP9HL._AC_SY580_.jpg"
+    },
+    {
+      "id": 8,
+      "category": "T-Shirts",
+      "name": "Women's Graphic T-Shirt",
+      "price": 19.99,
+      "discount": 10,
+      "description": "A stylish and comfortable graphic t-shirt for women. Express your unique style with these graphic tees that offer both comfort and fashion. The 10% discount makes them an affordable choice.",
+      "rating": 4.6,
+      "image_url": "https://n.nordstrommedia.com/id/sr3/7edc8cf7-1674-419b-98bd-61f7055bb3ca.jpeg?h=365&w=240&dpr=2"
+    },
     {
       "id": 9,
       "category": "Shorts",
