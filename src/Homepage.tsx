@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import BottomNav from './BottomNav'
 import Products from './Products'

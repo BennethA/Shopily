@@ -1,6 +1,7 @@
 import {
   Link 
 } from 'react-router-dom';
+
 function Topbar () {
   let body = document.body.style
   function onColorChange() {
@@ -14,34 +15,33 @@ function Topbar () {
   }
   return (
     <>
-    <div className="reachUs">
-      <div className="reachUsOne">
-        <div className="location">Accra, Ghana, West Africa</div>
-        <div className="contact">0249927554</div>
-      </div>
-      <div className="reachUsTwo" onClick={onColorChange}>
-        <button className="colorChanger">&#9728;</button>
-      </div>
-    </div>
-    <div className="main">
-      <div className="first">
-        <div className="name">
-          <Link to='/'>
-            SHOPILY
-          </Link>
+      <div className="reachUs">
+        <div className="reachUsOne">
+          <div className="location">Accra, Ghana, West Africa</div>
+          <div className="contact">0249927554</div>
         </div>
-        <div className="inputSection">
-          <input type="text" className="inputName" placeholder='what are you looking for'/>
-          <button className="searchBtn">Search</button>
-        </div>
-        <div className="cartDisplay">
-          <Link to='/shoppingCart'>
-            Shopping cart
-          </Link>
+        <div className="reachUsTwo" onClick={onColorChange}>
+          <button className="colorChanger">&#9728;</button>
         </div>
       </div>
-    </div>
-
+      <div className="main">
+        <div className="first">
+          <div className="name">
+            <Link to='/'>
+              SHOPILY
+            </Link>
+          </div>
+          <div className="inputSection">
+            <input type="text" className="inputName" placeholder='what are you looking for'/>
+            <button className="searchBtn">Search</button>
+          </div>
+          <div className="cartDisplay">
+            <Link to='/shoppingCart'>
+              Shopping cart
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
