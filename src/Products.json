@@ -40,16 +40,6 @@
       "image_url": "https://www.underarmour.ae/dw/image/v2/BHCQ_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwd6610f06/ua/U/3/0/U_3026264_301_2568.jpg?sw=700&sh=700&sm=fit"
     },
     {
-      "id": 5,
-      "category": "Suits",
-      "name": "Men's Formal Suit",
-      "price": 149.99,
-      "discount": 0,
-      "description": "A classic formal suit for men, suitable for weddings and formal events. This impeccably tailored suit exudes sophistication and timeless style. It's a wardrobe staple for any gentleman looking to make a statement.",
-      "rating": 4.7,
-      "image_url": "https://img.fruugo.com/product/3/42/228633423_max.jpg"
-    },
-    {
       "id": 6,
       "category": "Outerwear",
       "name": "Women's Trench Coat",
@@ -71,7 +61,7 @@
     },
     {
       "id": 8,
-      "category": "T-Shirts",
+      "category": "Shirts",
       "name": "Women's Graphic T-Shirt",
       "price": 19.99,
       "discount": 10,
@@ -101,7 +91,7 @@
     },
     {
       "id": 11,
-      "category": "Sweaters",
+      "category": "Swimwear",
       "name": "Men's Knit Sweater",
       "price": 49.99,
       "discount": 0,
@@ -190,26 +180,6 @@
       "image_url": "data:image/jpeg;base64,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"
     },
     {
-      "id": 20,
-      "category": "Sweaters",
-      "name": "Women's Cable-Knit Sweater",
-      "price": 59.99,
-      "discount": 15,
-      "description": "A cozy and stylish cable-knit sweater for women. This cable-knit sweater is designed to keep you warm and fashionable during the colder months. The 15% discount adds to its allure.",
-      "rating": 4.7,
-      "image_url": "https://www.americaneagle.ae/assets/styles/AmericanEagle/1142_1757_106/image-thumb__906729__product_zoom_large_800x800/1142_1757_106_f.jpg"
-    },
-    {
-      "id": 21,
-      "category": "Shorts",
-      "name": "Men's Bermuda Shorts",
-      "price": 29.99,
-      "discount": 0,
-      "description": "Comfortable and stylish Bermuda shorts for men. These Bermuda shorts offer a comfortable and trendy option for your summer wardrobe. Their versatility makes them perfect for various activities.",
-      "rating": 4.2,
-      "image_url": "https://galerieslafayette.ae/97968-large_default/901042812-stretch-cotton-bermuda-shorts.jpg"
-    },
-    {
       "id": 22,
       "category": "Dresses",
       "name": "Women's Maxi Dress",
@@ -221,7 +191,7 @@
     },
     {
       "id": 23,
-      "category": "T-Shirts",
+      "category": "Shirts",
       "name": "Men's Basic White T-Shirt",
       "price": 14.99,
       "discount": 0,
@@ -240,18 +210,8 @@
       "image_url": "https://cdn.luxe.digital/media/2020/10/02160026/best-women-pajamas-eberjey-review-luxe-digital.jpg"
     },
     {
-      "id": 25,
-      "category": "Jackets",
-      "name": "Men's Leather Jacket",
-      "price": 129.99,
-      "discount": 15,
-      "description": "A stylish and rugged leather jacket for men. This leather jacket combines style and durability, making it perfect for outdoor adventures. The 15% discount adds extra value.",
-      "rating": 4.7,
-      "image_url": "https://img.fruugo.com/product/3/25/644916253_max.jpg"
-    },
-    {
       "id": 26,
-      "category": "Blouses",
+      "category": "Dresses",
       "name": "Women's Silk Blouse",
       "price": 54.99,
       "discount": 0,
@@ -271,23 +231,13 @@
     },
     {
       "id": 28,
-      "category": "Activewear",
+      "category": "Pants",
       "name": "Women's Yoga Leggings",
       "price": 24.99,
       "discount": 0,
       "description": "Stretchy and supportive yoga leggings for women. These yoga leggings provide the support and flexibility you need during workouts. They are a must-have for active women.",
       "rating": 4.8,
       "image_url": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026539&itemId=100694892-894&recipeName=680"
-    },
-    {
-      "id": 29,
-      "category": "Accessories",
-      "name": "Men's Tie Set (Pack of 3)",
-      "price": 24.99,
-      "discount": 10,
-      "description": "A set of three classic ties for men, perfect for formal occasions. This tie set offers versatility and style for your formal attire. The 10% discount makes it a great value.",
-      "rating": 4.6,
-      "image_url": "https://img.fruugo.com/product/7/16/542630167_max.jpg"
     },
     {
       "id": 30,
@@ -321,7 +271,7 @@
     },
     {
       "id": 33,
-      "category": "T-Shirts",
+      "category": "Shirts",
       "name": "Men's Graphic T-Shirt",
       "price": 21.99,
       "discount": 0,
@@ -400,16 +350,6 @@
       "image_url": "https://mobile.yoox.com/images/items/15/15202190PB_14_f.jpg?impolicy=crop&width=387&height=490"
     },
     {
-      "id": 41,
-      "category": "Jewelry",
-      "name": "Elegant Diamond Necklace",
-      "price": 299.99,
-      "discount": 20,
-      "description": "Enhance your elegance with this exquisite diamond necklace. It's a perfect accessory for special occasions and a statement piece. Enjoy a 20% discount for a limited time.",
-      "rating": 4.8,
-      "image_url": "https://www.lialijewellery.com/media/catalog/product/cache/1221331df2bec2255dbb827748d8a552/j/o/joie-set2-nk.jpg"
-    },
-    {
       "id": 42,
       "category": "Perfume",
       "name": "Luxury Floral Perfume for Women",
@@ -421,7 +361,7 @@
     },
     {
       "id": 43,
-      "category": "Jewelry",
+      "category": "Accessories",
       "name": "Men's Stainless Steel Bracelet",
       "price": 49.99,
       "discount": 10,
@@ -441,7 +381,7 @@
     },
     {
       "id": 45,
-      "category": "Jewelry",
+      "category": "Accessories",
       "name": "Women's Pearl Earrings",
       "price": 39.99,
       "discount": 10,
@@ -461,7 +401,7 @@
     },
     {
       "id": 47,
-      "category": "Jewelry",
+      "category": "Accessories",
       "name": "Silver Cross Pendant Necklace",
       "price": 29.99,
       "discount": 20,
@@ -481,7 +421,7 @@
     },
     {
       "id": 49,
-      "category": "Jewelry",
+      "category": "Accessories",
       "name": "Men's Black Leather Bracelet",
       "price": 34.99,
       "discount": 15,
@@ -501,7 +441,7 @@
     },
     {
       "id": 51,
-      "category": "Jewelry",
+      "category": "Accessories",
       "name": "Women's Gold Hoop Earrings",
       "price": 49.99,
       "discount": 10,

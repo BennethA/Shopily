@@ -1,5 +1,6 @@
-import Topbar from "./Topbar"
 import './ShoppingCart.css'
+import Topbar from './Topbar'
+import Product from './Products.json'
 
 function ShoppingCart({cart}) {
   return (
@@ -9,13 +10,13 @@ function ShoppingCart({cart}) {
         <div className="cart">
           Cart
         </div>
-        {cart.map((product) => {
+        {cart.map(product => {
           return (
             <>
               <div className="cartProducts">
                 <div className="cartProduct">
                   <div className="image">
-                    <img src={product.image} alt="" />
+                    <img src={product.image_url} alt="" />
                   </div>
                   <div className="cartProductDesc">
                     {product.description}
@@ -28,9 +29,9 @@ function ShoppingCart({cart}) {
             </>
           )
         })}
-            <div className="totalAmount">
-              Total: <b>$0.00</b>
-            </div>
+          <div className="totalAmount">
+            Total: <b>{}</b>
+          </div>
       </div>
     </>
   )

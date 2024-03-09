@@ -5,55 +5,26 @@
   box-sizing: border-box;
 }
 
+body {
+  top: 60px;
+  position: relative;
+}
+
 button {
   cursor: pointer;
 }
 
-.reachUs {
-  width: 100%;
-  z-index: 100;
-  height: 30px;
-  display: flex;
-  color: white;
-  position: fixed;
-  padding: 1% 12%;
-  align-items: center;
-  border-bottom: 2px solid;
-  background-color: black;
-  justify-content: space-between;
-}
-
-.reachUsOne {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.reachUsTwo {
-  right: 10px;
-  cursor: pointer;
-  position: fixed;
-  padding: 2px 5px;
-  border: 2px solid;
-  border-radius: 20px;
-}
-
-.colorChanger {
-  border: none;
-  color: white;
-  background: none;
-}
-
 .main {
-  top: 30px;
-  padding: 0% 12%;
-  position: relative;
-}
-
-.first {
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  z-index: 100;
+  position: fixed;
+  padding: 10px 30px;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(26, 4, 32);
 }
 
 .name {
@@ -62,9 +33,9 @@ button {
 }
 
 .name a {
-  color: rgb(0, 255, 0);
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 255, 0);
 }
 
 .inputSection {
@@ -76,33 +47,37 @@ button {
 .inputName {
   flex: 1;
   width: 0;
+  border: none;
+  outline: none;
   margin-right: -1px;
-  border: 1px solid gray;
-  padding: 10px 0px 10px 10px;   
   border-radius: 20px 0 0 20px;
+  padding: 10px 0px 10px 10px;   
+  border: 1px solid rgb(0, 255, 0);
 }
 
 .searchBtn {
-  width: 60px;
   border: none;
+  padding: 10px;
   color: white;
-  font-size: 14px;
+  border-left: 0;
+  font-size: 15px;
   border-radius: 0 20px 20px 0;
   background-color: rgb(0, 255, 0);
+  border-top: 1px solid rgb(0, 255, 0);
+  border-right: 1px solid rgb(0, 255, 0);
+  border-bottom: 1px solid rgb(8, 158, 8);
 }
 
 .cartDisplay a{
-  color: black;
-  text-decoration: none;
+  color: rgb(0, 255, 0);
   cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .home {
-  padding: 0 12%;
-  margin-top: 40px;
-}
-
-.homeFirst {
+  padding: 35px 5%;
+  background-color: red;
 }
 
 .welcomeMsg {
@@ -111,7 +86,9 @@ button {
 
 .openMsg {
   font-size: 35px;
+  line-height: 50px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .shopily {
@@ -120,17 +97,28 @@ button {
 
 .description {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .shopNowBtn {
-  border: none;
+  transform: 3s;
+  border-radius: 10px;
+  border: 2px solid rgb(26, 206, 26);
+}
+
+.shopNowBtn a{
+  display: flex;
   padding: 10px;
   color: white;
   font-weight: bold;
+  font-weight: bold;
   border-radius: 10px;
-  transform: 3s;
-  background: rgb(0, 255, 0);
+  text-decoration: none;
+  background-color: rgb(0, 250, 0);
+}
+
+.shopNowBtn a:active{
+  background-color: rgb(17, 85, 17);
 }
 
 .help {
@@ -156,14 +144,32 @@ button {
   font-size: 14px;
 }
 
+.shop {
+  padding: 15px;
+  object-fit: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url('images/background-img.jpg');
+}
+
+.productsSection {
+  backdrop-filter: blur(5px);
+}
+
 .products {
+  display: grid;
+  row-gap: 10px;
+  column-gap: 10px;
   margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .topic {
   font-weight: bold;
   text-align: center;
   font-size: xx-large;
+  color: rgb(0, 250, 0);
   text-underline-position: above;
 }
 
@@ -185,10 +191,11 @@ button {
 
 .productsNav {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   overflow-x: auto;
   align-items: center;
   border-radius: 10px;
+  border: 2px solid;
   background-color: rgb(0, 255, 0);
 }
 
@@ -202,58 +209,60 @@ button {
   font-weight: bold;
 }
 
+.productsNav button:hover {
+  opacity: 0.8;
+}
+
 .pNText:focus {
-  color: rgb(0, 255, 0);
-  background-color: white;
+  color: whitesmoke;
+  background-color: #1a0420;
 }
 
-.productsSection {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px;
-  row-gap: 10px;
-}
-
-@media (min-width: 500px) {
-  .productsSection {
-    grid-template-columns: 1fr;
+@media (max-width: 700px) {
+  .products {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .productDesc {
+    width: 300px;
   }
 }
 
 @media (min-width: 700px) {
-  .productsSection {
+  .products {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1000px) {
-  .productsSection {
+  .products {
     grid-template-columns: 1fr 1fr 1fr ;
   }
 }
 
 .productDesc {
-  padding: 5px 30px;
+  padding: 5px 20px;
   border: 1px solid;
   border-radius: 10px;
-  background-color: antiquewhite;
 }
 
 .productImage{
   display: flex;
-  align-items: center;
   height: 250px;
   overflow: hidden;
+  align-items: center;
   justify-content: center;
 }
 
 .productImage img{
-  width: auto;
   height: 100%;
+  width: auto;
 }
 
-.productsSection h3{
+.productDesc h3{
   text-align: center;
   border: 1px solid white;
   border-radius: 10px;
@@ -266,66 +275,54 @@ hr {
   background-color: rgb(199, 230, 20);
 }
 
-.productsSection p {
+.products p {
   font-weight: bolder;
   text-align: center;
 }
 
-.addToCart {
-  text-align: center;
-  background-color: rgb(0, 255, 0);
-  border-radius: 15px;
-  padding: 5px 0;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.addToCart a {
-  color: black;
+.productDesc a {
   text-decoration: none;
 }
 
-.another {
+.addToCart {
   display: flex;
-  padding: 1% 12%;
-  justify-content: space-between;
-  background-color: rgb(165, 163, 163);
-}
-
-.subScribeBtn {
-  width: 60px;
-  border: none;
-  color: white;
-  font-size: 11px;
+  color: black;
+  padding: 5px 0;
+  cursor: pointer;
   font-weight: bold;
-  border-radius: 0 20px 20px 0;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
   background-color: rgb(0, 255, 0);
 }
 
-.bottomNav {
-  width: 100%;
-  display: flex;
+.reachUs {
   color: white;
-  overflow-x: auto;
-  background-color: black;
+  padding: 10px 20px;
+  background-color: #1a0420;
 }
 
-.aboutShopily {
-  width: 25%;
-  padding: 5px;
-  text-align: center;
-  border-right: 2px solid gray;
-}
-
-.head {
+.socials p,.location p{
   font-weight: bold;
-  text-align: center;
+  font-size: large;
+  text-decoration: underline;
 }
 
-.aboutShopily p{
-  color: gray;
+.socials div{
+  display: flex;
+  margin-top: 5px;
 }
 
-.aboutShopily span{
-  color: white;
+.location {
+  margin-top: 15px;
+}
+
+.location div {
+  display: flex;
+}
+
+.reachUs div a{
+  margin-left: 5px;
+  color: whitesmoke;
+  text-decoration: none;
 }

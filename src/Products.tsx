@@ -2,15 +2,16 @@ import { useState } from 'react'
 import './Products.css'
 import PRODUCTS from './Products.json'
 import { Link } from 'react-router-dom'
+import { FaCartPlus } from 'react-icons/fa6'
 
 function Products ({addToCart}) {
-
+  const categories = ["All", "Shirts", "Dresses", "Jeans", "Footwear", "Outerwear", "Swimwear", "Shorts", "Hats", "Socks", "Hoodies", "Pants", "Skirts", "Accessories", "Pajamas", "Sweaters", "Suits", "Perfume" ]
   const [selectedCategory, setSelectedCategory] = useState('All')
 
-  const filteredProducts = selectedCategory === 'All' ? PRODUCTS:PRODUCTS.filter(product => product.type === selectedCategory)
+  const filteredProducts = selectedCategory === 'All' ? PRODUCTS : PRODUCTS.filter(product => product.category === selectedCategory)
   return (
     <>
-    <div className="products">
+    <div className="productsSection">
       <div className="topic">
         <h4>OUR PRODUCTS</h4>
         <div className="underlineMain">
@@ -18,32 +19,39 @@ function Products ({addToCart}) {
         </div>
       </div>
       <div className="productsNav">
-        <button className="pNText" onClick={() => setSelectedCategory('All')}>All</button>
-        <button className="pNText" onClick={() => setSelectedCategory('men')}>Men's Clothing</button>
-        <button className="pNText" onClick={() => setSelectedCategory('women')}>Women's Clothing</button>
-        <button className="pNText" onClick={() => setSelectedCategory('jewelry')}>Jewlry</button>
-        <button className="pNText" onClick={() => setSelectedCategory('children')}>Children's Clothing</button>
+        {
+          categories.map(category => {
+            return (
+              <>
+                <button 
+                className="pNText" 
+                onClick={() => setSelectedCategory(category)}>{category}</button>
+              </>
+            )
+
+          })
+        }
       </div>
-      <div className="productsSection">
+      <div className="products">
         {
           filteredProducts.map((product) => {
             return (
                 <div className="productDesc" key={product.id}>
                   <div className="productImage">
-                    <img src={product.image} alt="" />
+                    <img src={product.image_url} alt="" />
                   </div>
                   <h3>
-                    {product.description}
+                    {product.name}
                   </h3>
                   <hr />
                   <p>
-                    {product.price}
+                    ${product.price}
                   </p>
-                  <div className="addToCart" onClick={() => addToCart(product)}>
-                    <Link to='/shoppingCart'>
-                      Add To Cart
-                    </Link>
-                  </div>
+                  <Link to='/shoppingCart' onClick={() => addToCart(product)}>
+                    <div className="addToCart">
+                        Add To Cart <FaCartPlus/>
+                    </div>
+                  </Link>
                 </div> 
             )
           })
