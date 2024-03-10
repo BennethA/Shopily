@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom'
 import './ShoppingCart.css'
-import Topbar from './Topbar'
-import Product from './Products.json'
+import { FaArrowLeft } from 'react-icons/fa6'
 
 function ShoppingCart({cart}) {
+  let totalAmount = cart.reduce((total, product) => total + product.price, 0)
   return (
     <>
-      <Topbar/>
       <div className="shoppingCart">
+        <div className="shopLink">
+          <Link to="/shop"><FaArrowLeft/></Link>
+        </div>
         <div className="cart">
           Cart
         </div>
@@ -30,7 +33,7 @@ function ShoppingCart({cart}) {
           )
         })}
           <div className="totalAmount">
-            Total: <b>{}</b>
+            Total: <b>${totalAmount}</b>
           </div>
       </div>
     </>

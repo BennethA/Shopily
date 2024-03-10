@@ -6,7 +6,7 @@
 }
 
 body {
-  top: 60px;
+  top: 50px;
   position: relative;
 }
 
@@ -18,13 +18,22 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
+  gap: 5px;
   z-index: 100;
+  display: grid;
   position: fixed;
-  padding: 10px 30px;
+  padding: 5px 5%;
   align-items: center;
   justify-content: space-between;
+  grid-template-columns: 1fr 60px;
   background-color: rgb(26, 4, 32);
+}
+
+.main1 {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 2fr auto;
 }
 
 .name {
@@ -39,9 +48,9 @@ button {
 }
 
 .inputSection {
-  width: 400px;
   display: flex;
   margin: 0 10px;
+  min-width: 200px;
 }
 
 .inputName {
@@ -49,9 +58,10 @@ button {
   width: 0;
   border: none;
   outline: none;
+  max-width: 350px;
   margin-right: -1px;
-  border-radius: 20px 0 0 20px;
   padding: 10px 0px 10px 10px;   
+  border-radius: 20px 0 0 20px;
   border: 1px solid rgb(0, 255, 0);
 }
 
@@ -60,7 +70,7 @@ button {
   padding: 10px;
   color: white;
   border-left: 0;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 0 20px 20px 0;
   background-color: rgb(0, 255, 0);
   border-top: 1px solid rgb(0, 255, 0);
@@ -69,15 +79,40 @@ button {
 }
 
 .cartDisplay a{
-  color: rgb(0, 255, 0);
+  display: flex;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
+  flex-direction: column;
+  color: rgb(0, 255, 0);
+}
+
+.user {
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: baseline;
+  background-color: rgb(0, 250, 0);
+}
+
+.user p {
+  color: white;
+}
+
+.user img {
+  width: 100%;
 }
 
 .home {
+  color: white;
   padding: 35px 5%;
-  background-color: red;
+  object-fit: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url('images/background-img1.jpg');
 }
 
 .welcomeMsg {
@@ -101,9 +136,10 @@ button {
 }
 
 .shopNowBtn {
+  border: none;
   transform: 3s;
-  border-radius: 10px;
-  border: 2px solid rgb(26, 206, 26);
+  border-radius: 5px;
+  background-color: rgb(0, 250, 0);
 }
 
 .shopNowBtn a{
@@ -114,7 +150,7 @@ button {
   font-weight: bold;
   border-radius: 10px;
   text-decoration: none;
-  background-color: rgb(0, 250, 0);
+  border-radius: 5px;
 }
 
 .shopNowBtn a:active{
@@ -125,6 +161,10 @@ button {
   display: flex;
   margin-top: 40px;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.helpText:last-child {
+  color: black;
 }
 
 .helpText {
@@ -154,7 +194,6 @@ button {
 }
 
 .productsSection {
-  backdrop-filter: blur(5px);
 }
 
 .products {
@@ -194,7 +233,7 @@ button {
   margin-top: 10px;
   overflow-x: auto;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 2px solid;
   background-color: rgb(0, 255, 0);
 }
@@ -216,6 +255,26 @@ button {
 .pNText:focus {
   color: whitesmoke;
   background-color: #1a0420;
+}
+
+.productsNav::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  height: 20px;
+  border-radius: 5px;
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(17, 85, 17);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: green;
 }
 
 @media (max-width: 700px) {
@@ -325,4 +384,65 @@ hr {
   margin-left: 5px;
   color: whitesmoke;
   text-decoration: none;
+}
+
+.model {
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formBox {
+  gap: 10px;
+  display: flex;
+  padding: 25px 5%;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+.model form {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.model form div {
+  margin: 5px 0;
+}
+
+.model form input{
+  border: none;
+  padding: 5px;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.model form button {
+  padding: 3%;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(0, 250, 0);
+  border: 2px solid rgb(17, 85, 17);
+}
+
+.noAccount {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+.xMark {
+  font-size: 150%;
+  cursor: pointer;
+  font-weight: bold;
 }

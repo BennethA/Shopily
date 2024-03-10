@@ -6,7 +6,7 @@ import { FaCartPlus } from 'react-icons/fa6'
 
 function Products ({addToCart}) {
   const categories = ["All", "Shirts", "Dresses", "Jeans", "Footwear", "Outerwear", "Swimwear", "Shorts", "Hats", "Socks", "Hoodies", "Pants", "Skirts", "Accessories", "Pajamas", "Sweaters", "Suits", "Perfume" ]
-  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [selectedCategory, setSelectedCategory] = useState("All")
 
   const filteredProducts = selectedCategory === 'All' ? PRODUCTS : PRODUCTS.filter(product => product.category === selectedCategory)
   return (

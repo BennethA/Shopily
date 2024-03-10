@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom'
 import './App.css'
 import Footer from './Footer'
-import Topbar from './Topbar'
 
-function Home() { 
+function Home({handleModel, toModel}) { 
 
   return (
     <>
-      <Topbar/>
       <div>
         <div className="home">
           <div className="homeFirst">
@@ -20,7 +19,7 @@ function Home() {
                 Shopily is like having your favorite store in your pocket and on the internet just like Amazon. <br /> It brings the world of online shopping right to your fingertips, making it easier than ever to find and purchase the things you love.
               </div>
               <button className="shopNowBtn">
-                <a href="/shop">SHOP NOW</a>  
+                <Link to="/shop">SHOP NOW</Link>
               </button>
             </div>
           </div>
