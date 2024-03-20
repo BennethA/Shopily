@@ -7,22 +7,22 @@ function Footer () {
         <div className="socials">
           <p>Socials: </p>
           <div>
-            <FaFacebook/><a href=""> Facebook</a>
+            <FaFacebook/><a href="http://www.facebook.com/shopily"> Facebook</a>
           </div>
           <div>
-            <FaWhatsapp/><a href=""> Whatsapp</a> 
+            <FaWhatsapp/><a href="http://wa.me/0508529031"> Whatsapp</a> 
           </div>
           <div>
-            <FaTwitter/><a href=""> Twitter(X)</a>
+            <FaTwitter/><a href="http://www.twitter.com/shopily"> Twitter(X)</a>
           </div>
           <div>
-            <FaGoogle/><a href=""> Gmail</a>
+            <FaGoogle/><a href="mailto:addobenneth6@gmail.com"> Gmail</a>
           </div>
         </div>
         <div className="location">
           <p>Location: </p>
           <div>
-            <FaMap/><a href=""> Location: Accra, Ghana, West Africa</a>
+            <FaMap/><a href="http://www.google.com/maps?q=Accra"> Location: Accra, Ghana, West Africa</a>
           </div>
 
         </div>

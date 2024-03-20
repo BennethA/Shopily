@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import './Products.css'
 import PRODUCTS from './Products.json'
-import { Link } from 'react-router-dom'
 import { FaCartPlus } from 'react-icons/fa6'
 
-function Products ({addToCart}) {
+function Products (props: { addToCart: (arg0: { id: number; category: string; name: string; price: number; discount: number; description: string; rating: number; image_url: string }) => void }) {
   const categories = ["All", "Shirts", "Dresses", "Jeans", "Footwear", "Outerwear", "Swimwear", "Shorts", "Hats", "Socks", "Hoodies", "Pants", "Skirts", "Accessories", "Pajamas", "Sweaters", "Suits", "Perfume" ]
   const [selectedCategory, setSelectedCategory] = useState("All")
 
@@ -22,17 +20,16 @@ function Products ({addToCart}) {
         {
           categories.map(category => {
             return (
-              <>
-                <button 
-                className="pNText" 
-                onClick={() => setSelectedCategory(category)}>{category}</button>
-              </>
+              <button key={category}
+                className={`category ${selectedCategory === category ? "active" : "notActive"}`}
+                onClick={() => setSelectedCategory(category)}>{category}
+              </button>
             )
 
           })
         }
       </div>
-      <div className="products">
+      <div className="products"> 
         {
           filteredProducts.map((product) => {
             return (
@@ -47,11 +44,11 @@ function Products ({addToCart}) {
                   <p>
                     ${product.price}
                   </p>
-                  <Link to='/shoppingCart' onClick={() => addToCart(product)}>
-                    <div className="addToCart">
-                        Add To Cart <FaCartPlus/>
-                    </div>
-                  </Link>
+                  <div onClick={() => props.addToCart(product) }>
+                    <button className="addToCart">
+                      Add To Cart<FaCartPlus/>
+                    </button>
+                  </div>
                 </div> 
             )
           })

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './App.css'
 import Footer from './Footer'
 
-function Home({handleModel, toModel}) { 
+function Home() { 
 
   return (
     <>

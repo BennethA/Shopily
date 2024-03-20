@@ -1,9 +1,12 @@
-import { Link } from 'react-router-dom'
 import './ShoppingCart.css'
-import { FaArrowLeft } from 'react-icons/fa6'
+import Purchase from './Purchase'
+import { Link } from 'react-router-dom'
+import { MouseEventHandler } from 'react'
+import { FaArrowLeft, FaXmark } from 'react-icons/fa6'
 
-function ShoppingCart({cart}) {
-  let totalAmount = cart.reduce((total, product) => total + product.price, 0)
+function ShoppingCart(props: { cart: any[]; handleDel: (arg0: any) => void; handleToPurchase: MouseEventHandler<HTMLButtonElement> | undefined; toPurchase: any }) {
+
+  let totalAmount = Math.round(props.cart.reduce((total: any, product: { price: any }) => total + product.price, 0))
   return (
     <>
       <div className="shoppingCart">
@@ -13,29 +16,42 @@ function ShoppingCart({cart}) {
         <div className="cart">
           Cart
         </div>
-        {cart.map(product => {
-          return (
-            <>
-              <div className="cartProducts">
-                <div className="cartProduct">
-                  <div className="image">
-                    <img src={product.image_url} alt="" />
-                  </div>
-                  <div className="cartProductDesc">
-                    {product.description}
-                  </div>
-                  <div className="cartProductPrice">
-                    {product.price}
+        <div className="addedProducts">
+          {props.cart.map((product: any) => {
+            return (
+              <>
+                <div className="cartProducts" key={product}>
+                  <div className="cartProduct">
+                    <div className="image">
+                      <img src={product.image_url} alt="" />
+                    </div>
+                    <div className="cartProductDesc">
+                      {product.description}
+                      <div className='remove' onClick={() => props.handleDel(product)}>
+                        <FaXmark/>
+                      </div>
+                    </div>
+                    <div className="cartProductPrice">
+                      Amount: {product.price}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>
-          )
-        })}
-          <div className="totalAmount">
-            Total: <b>${totalAmount}</b>
-          </div>
+              </>
+            )
+          })}
+        </div>
+        <div className="amtAndPurchase">
+          <div>Total: <b>${totalAmount}</b></div>
+          <button className="purchase" onClick={props.handleToPurchase}>
+            Purchase
+          </button>
+        </div>
       </div>
+      {
+        props.toPurchase 
+        ? <Purchase handleToPurchase={props.handleToPurchase}/>
+        : ""
+      }
     </>
   )
 }

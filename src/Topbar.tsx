@@ -1,20 +1,25 @@
 import {
   Link 
 } from 'react-router-dom';
-import { FaCartShopping } from 'react-icons/fa6'
-import { FaSearch } from 'react-icons/fa';
-import userProfile from '../public/images/user.png';
 import Model from './Model';
-import { useState } from 'react';
+import Profile from './Profile';
+import { FaSearch } from 'react-icons/fa';
+import { FaCartShopping } from 'react-icons/fa6'
+import userProfile from '../public/images/user.png';
+import { MouseEventHandler, useState } from 'react';
 
-function Topbar ({handleModel, toModel, login, onSearch, handleHasAccount, hasAccount}) {
+function Topbar (props: { handleSearch: (arg0: string) => void; cart: string | any[]; login: any; handleToProfile: MouseEventHandler<HTMLImageElement> | undefined; handleToModel: MouseEventHandler<HTMLParagraphElement> | any; toModel: any; hasAccount: any; handleLogin: any; handleHasAccount: any; toProfile: any; handleLogOut: any; }) 
+{
   const userImg = userProfile;
   const [searchQuery, setSearchQuery] = useState('')
-  const handleSearch = (event) => {
+
+  const handleInputChange = (event: { target: { value: any; }; }) => {
     const query = event.target.value;
     setSearchQuery(query)
-    onSearch(query)
-    console.log(query);
+  }
+  
+  const handleInputClick = () => {
+    props.handleSearch(searchQuery)
   }
   
   return (
@@ -32,25 +37,41 @@ function Topbar ({handleModel, toModel, login, onSearch, handleHasAccount, hasAc
             value={searchQuery} 
             className="inputName" 
             placeholder='what are you looking for'
-            onChange={handleSearch}/>
-            <button className="searchBtn">
+            onChange={handleInputChange}/>
+            <button className="searchBtn" onClick={handleInputClick}>
               <FaSearch/>
             </button>
           </div>
           <div className="cartDisplay">
             <Link to='/shoppingCart'>
-              Shopping cart <FaCartShopping/>
+              <div>Cart<FaCartShopping/></div>
+              {props.cart.length}
             </Link>
           </div>
         </div>
-        <div onClick={handleModel} className="user">
+        <button className="user">
           {
-            login ? <img src={userImg} alt="" /> : <p>Log In</p>
+            props.login 
+            ? <img src={userImg} alt="" onClick={props.handleToProfile}/> 
+            : <p onClick={props.handleToModel}>Log In</p>
           }
-          
-        </div>
+        </button>
       </div>
-      {toModel ? <Model hasAccount={hasAccount} handleLogin={undefined} handleModel={handleModel} handleHasAccount={handleHasAccount}/> : ""}
+      {
+        props.toModel 
+        ? <Model 
+            hasAccount={props.hasAccount}
+            handleLogin={props.handleLogin}
+            handleHasAccount={props.handleHasAccount} 
+            handleToModel={props.handleToModel}/> 
+        : ""
+      }
+      {
+        props.toProfile
+        ? <Profile 
+            handleLogOut={props.handleLogOut}/>
+        : ""
+      }
     </>
   )
 }

@@ -11,7 +11,14 @@ body {
 }
 
 button {
+  border: none;
   cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
 }
 
 .main {
@@ -19,10 +26,11 @@ button {
   left: 0;
   right: 0;
   gap: 5px;
+  height: 50px;
   z-index: 100;
   display: grid;
   position: fixed;
-  padding: 5px 5%;
+  padding: 5px 5px;
   align-items: center;
   justify-content: space-between;
   grid-template-columns: 1fr 60px;
@@ -32,8 +40,7 @@ button {
 .main1 {
   display: grid;
   align-items: center;
-  justify-content: space-between;
-  grid-template-columns: 1fr 2fr auto;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .name {
@@ -49,60 +56,96 @@ button {
 
 .inputSection {
   display: flex;
-  margin: 0 10px;
-  min-width: 200px;
+  min-width: 0px;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputName {
   flex: 1;
   width: 0;
   border: none;
+  height: 40px;
   outline: none;
   max-width: 350px;
   margin-right: -1px;
-  padding: 10px 0px 10px 10px;   
+  padding-left: 10px;
   border-radius: 20px 0 0 20px;
-  border: 1px solid rgb(0, 255, 0);
 }
 
 .searchBtn {
-  border: none;
+  height: 40px;
   padding: 10px;
-  color: white;
   border-left: 0;
+  color: white;
   font-size: 16px;
   border-radius: 0 20px 20px 0;
   background-color: rgb(0, 255, 0);
   border-top: 1px solid rgb(0, 255, 0);
   border-right: 1px solid rgb(0, 255, 0);
-  border-bottom: 1px solid rgb(8, 158, 8);
+  border-bottom: 1px solid rgb(0, 255, 0);
+}
+
+.searchBtn:active {
+  background-color: rgb(17, 85, 17);
+}
+
+.cartDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartDisplay a:hover {
+  color: rgb(17, 85, 17);
 }
 
 .cartDisplay a{
+  gap: 10px;
   display: flex;
   cursor: pointer;
   font-weight: bold;
+  align-items: center;
   text-decoration: none;
-  flex-direction: column;
+  justify-content: center;
   color: rgb(0, 255, 0);
 }
 
-.user {
-  padding: 5px;
+.cartDisplay div {
   display: flex;
-  cursor: pointer;
-  border-radius: 5px;
   align-items: center;
-  justify-content: baseline;
-  background-color: rgb(0, 250, 0);
 }
 
-.user p {
-  color: white;
+.user {
+  display: flex;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.user:hover {
+  opacity: 0.6;
 }
 
 .user img {
-  width: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.user p {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 250, 0);
+}
+
+.user p:hover {
+  background-color: rgb(17, 85, 17);
 }
 
 .home {
@@ -110,6 +153,7 @@ button {
   padding: 35px 5%;
   object-fit: cover;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-image: url('images/background-img1.jpg');
@@ -137,7 +181,6 @@ button {
 
 .shopNowBtn {
   border: none;
-  transform: 3s;
   border-radius: 5px;
   background-color: rgb(0, 250, 0);
 }
@@ -147,10 +190,8 @@ button {
   padding: 10px;
   color: white;
   font-weight: bold;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .shopNowBtn a:active{
@@ -159,12 +200,9 @@ button {
 
 .help {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 40px;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-.helpText:last-child {
-  color: black;
 }
 
 .helpText {
@@ -188,12 +226,10 @@ button {
   padding: 15px;
   object-fit: cover;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-image: url('images/background-img.jpg');
-}
-
-.productsSection {
 }
 
 .products {
@@ -232,29 +268,30 @@ button {
   display: flex;
   margin-top: 10px;
   overflow-x: auto;
-  align-items: center;
-  border-radius: 10px 10px 0 0;
   border: 2px solid;
-  background-color: rgb(0, 255, 0);
+  border-radius: 10px 10px 0 0;
 }
 
-.productsNav button {
+.category {
+  flex: 1;
   border: none;
   height: 50px;
   padding: 10px;
   color: white;
   cursor: pointer;
-  background: none;
   font-weight: bold;
 }
 
-.productsNav button:hover {
+.notActive {
+  background-color: rgb(0, 255, 0);
+}
+
+.category:hover {
   opacity: 0.8;
 }
 
-.pNText:focus {
-  color: whitesmoke;
-  background-color: #1a0420;
+.active {
+  background-color: rgb(17, 85, 17);
 }
 
 .productsNav::-webkit-scrollbar {
@@ -262,14 +299,12 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  height: 20px;
   border-radius: 5px;
-  background: black;
+  background: rgb(0, 250, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-  height: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgb(17, 85, 17);
 }
 
@@ -306,6 +341,7 @@ button {
   padding: 5px 20px;
   border: 1px solid;
   border-radius: 10px;
+  backdrop-filter: blur(5px);
 }
 
 .productImage{
@@ -323,8 +359,8 @@ button {
 
 .productDesc h3{
   text-align: center;
-  border: 1px solid white;
   border-radius: 10px;
+  border: 1px solid white;
 }
 
 hr {
@@ -339,11 +375,9 @@ hr {
   text-align: center;
 }
 
-.productDesc a {
-  text-decoration: none;
-}
-
 .addToCart {
+  width: 100%;
+  border: none;
   display: flex;
   color: black;
   padding: 5px 0;
@@ -355,9 +389,18 @@ hr {
   background-color: rgb(0, 255, 0);
 }
 
+.addToCart:hover {
+  color: white;
+  background-color: rgb(17, 85, 17);
+}
+
 .reachUs {
+  height: 250px;
+  display: flex;
   color: white;
   padding: 10px 20px;
+  flex-direction: column;
+  justify-content: center;
   background-color: #1a0420;
 }
 
@@ -413,10 +456,6 @@ hr {
   flex-direction: column;
 }
 
-.model form div {
-  margin: 5px 0;
-}
-
 .model form input{
   border: none;
   padding: 5px;
@@ -426,23 +465,83 @@ hr {
 }
 
 .model form button {
-  padding: 3%;
+  padding: 7px;
   color: white;
-  font-size: large;
   font-weight: bold;
   border-radius: 10px;
   background-color: rgb(0, 250, 0);
-  border: 2px solid rgb(17, 85, 17);
 }
 
-.noAccount {
-  color: white;
-  background-color: red;
+.model form button:hover {
+  background-color: rgb(17, 85, 17);
+}
+
+.noAccount, .toLogin {
   cursor: pointer;
+  color: rgb(0, 255, 0);
+}
+
+.noAccount:hover, .toLogin:hover {
+  color: rgb(0, 0, 0);
 }
 
 .xMark {
+  cursor: pointer;
   font-size: 150%;
+  font-weight: bold;
+}
+
+.xMark:hover {
+  color: red;
+}
+
+.profile {
+  right: 0;
+  gap: 10px;
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  padding: 20px 10px;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  background-color: rgb(26, 4, 32);
+}
+
+.profile h2 {
+  color: rgb(17, 85, 17);
+}
+
+.details {
+  gap: 10px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.logOut {
+  color: red;
   cursor: pointer;
   font-weight: bold;
+  text-align: right;
+}
+
+.logOut a{
+  color: red;
+}
+
+.logOut a:hover {
+  color: rgb(112, 5, 5);
+}
+
+.purchaseProducts {
+  top: 60px;
+  gap: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  padding: 20px 10px;
+  flex-direction: column;
+  background-color: wheat;
 }
